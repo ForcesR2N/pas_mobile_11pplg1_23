@@ -59,7 +59,6 @@ class FavoritePage extends StatelessWidget {
                   padding: EdgeInsets.all(12),
                   child: Row(
                     children: [
-                      // Team Badge
                       Container(
                         width: 80,
                         height: 80,
@@ -87,7 +86,6 @@ class FavoritePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 16),
-                      // Team Info
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,7 +109,6 @@ class FavoritePage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      // Favorite Button
                       IconButton(
                         icon: Icon(
                           Icons.favorite,
