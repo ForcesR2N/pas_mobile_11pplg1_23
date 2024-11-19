@@ -10,6 +10,7 @@ class AuthController extends GetxController {
   static const String KEY_USERNAME = 'username';
   static const String KEY_FULL_NAME = 'fullName';
   static const String KEY_EMAIL = 'email';
+  static const String KEY_PASSWORD = 'password';
 
   var isLoading = false.obs;
   var username = ''.obs;
@@ -46,9 +47,11 @@ class AuthController extends GetxController {
         username.value = _prefs.getString(KEY_USERNAME) ?? '';
         fullName.value = _prefs.getString(KEY_FULL_NAME) ?? '';
         email.value = _prefs.getString(KEY_EMAIL) ?? '';
+        password.value = _prefs.getString(KEY_PASSWORD) ?? '';
         if (username.value.isEmpty ||
             fullName.value.isEmpty ||
-            email.value.isEmpty) {
+            email.value.isEmpty ||
+            password.value.isEmpty) {
           isLoggedIn.value = false;
           await clearAllFields();
         }

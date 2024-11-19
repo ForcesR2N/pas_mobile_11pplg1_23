@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                       controller: passwordController,
                       labelText: 'Password',
                       hintText: 'Enter your password',
-                      obscureText: true,
+                      obscureText: false,
                       prefixIcon: const Icon(Icons.lock),
                       onChanged: authController.updatePassword,
                       validator: (value) {
